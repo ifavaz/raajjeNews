@@ -10,6 +10,7 @@ import androidx.fragment.app.FragmentManager;
 
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
 
 import com.google.android.material.navigation.NavigationView;
 
@@ -45,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
             nvDrawer = (NavigationView) findViewById(R.id.nvView);
             // Setup drawer view
             setupDrawerContent(nvDrawer);
-
+            getWindow().getDecorView().setLayoutDirection(View.LAYOUT_DIRECTION_RTL);
         }
 
     private void setupDrawerContent(NavigationView navigationView) {

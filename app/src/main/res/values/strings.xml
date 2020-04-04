@@ -3,4 +3,11 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="header">ދިވެހިރާއްޖޭގެ ޚަބަރު</string>
+    <string name="first">މިހާރު ނިއުސް</string>
+    <string name="second">ވަގުތު ނިއުސް</string>
+    <string name="third">ޕީ. އެސް. އެމް. ނިއުސް</string>
+    <string name="sub_items">މުނިފޫހި ފިލުވުން</string>
+    <string name="sub_item_1">ދޯ އެމް. ވީ</string>
+    <string name="sub_item_2">ވާހަކަ އެމް. ވީ</string>
 </resources>
