@@ -7,6 +7,9 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.WebSettings;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
 
 
 /**
@@ -15,6 +18,9 @@ import android.view.ViewGroup;
  * create an instance of this fragment.
  */
 public class SecondFragment extends Fragment {
+
+    public WebView mWebView;
+
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -59,6 +65,24 @@ public class SecondFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_second, container, false);
+
+
+        View v = inflater.inflate(R.layout.fragment_second, container, false);
+        mWebView = (WebView) v.findViewById(R.id.webview2);
+        mWebView.loadUrl("https://www.vaguthu.mv");
+
+        // Enable Javascript
+        WebSettings webSettings = mWebView.getSettings();
+        webSettings.setJavaScriptEnabled(true);
+
+        // Force links and redirects to open in the WebView instead of in a browser
+        mWebView.setWebViewClient(new WebViewClient());
+
+        return v;
+
+
+
+
+
     }
 }
