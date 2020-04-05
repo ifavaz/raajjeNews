@@ -71,7 +71,7 @@ public class FirstFragment extends Fragment {
 
 
         View v = inflater.inflate(R.layout.fragment_first, container, false);
-        mWebView = (WebView) v.findViewById(R.id.webview);
+        mWebView = v.findViewById(R.id.webview);
         mWebView.loadUrl("https://www.mihaaru.com");
 
         // Enable Javascript

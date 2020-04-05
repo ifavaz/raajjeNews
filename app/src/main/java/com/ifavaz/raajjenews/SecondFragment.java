@@ -68,7 +68,7 @@ public class SecondFragment extends Fragment {
 
 
         View v = inflater.inflate(R.layout.fragment_second, container, false);
-        mWebView = (WebView) v.findViewById(R.id.webview2);
+        mWebView = v.findViewById(R.id.webview2);
         mWebView.loadUrl("https://www.vaguthu.mv");
 
         // Enable Javascript

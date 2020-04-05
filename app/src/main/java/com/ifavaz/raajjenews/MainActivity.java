@@ -30,10 +30,10 @@ public class MainActivity extends AppCompatActivity {
             setContentView(R.layout.activity_main);
 
             // Set a Toolbar to replace the ActionBar.
-            Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-            toolbar.setTitle("Hellow");
+            Toolbar toolbar = findViewById(R.id.toolbar);
+            toolbar.setTitle("ދިވެހިރާއްޖޭގެ ޚަބަރުތައް ...");
             setSupportActionBar(toolbar);
-            getSupportActionBar().setDefaultDisplayHomeAsUpEnabled(true);
+            //  getSupportActionBar().setDefaultDisplayHomeAsUpEnabled(true);
             getSupportActionBar().setHomeButtonEnabled(true);
             getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_menume);
 
@@ -41,9 +41,9 @@ public class MainActivity extends AppCompatActivity {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
             // Find our drawer view
-            mDrawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+            mDrawer = findViewById(R.id.drawer_layout);
 
-            nvDrawer = (NavigationView) findViewById(R.id.nvView);
+            nvDrawer = findViewById(R.id.nvView);
             // Setup drawer view
             setupDrawerContent(nvDrawer);
             getWindow().getDecorView().setLayoutDirection(View.LAYOUT_DIRECTION_RTL);

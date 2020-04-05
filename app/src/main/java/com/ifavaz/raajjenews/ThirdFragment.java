@@ -81,7 +81,7 @@ public class ThirdFragment extends Fragment {
 
         View v = inflater.inflate(R.layout.fragment_third, container, false);
 
-        mListView = (ListView) v.findViewById(R.id.listme);
+        mListView = v.findViewById(R.id.listme);
 
 
         StrictMode.ThreadPolicy policy = new
@@ -105,10 +105,10 @@ public class ThirdFragment extends Fragment {
 
 
     private void processData() {
-        String URL = "https://vaguthu.mv/news";
+        String URL = "https://psmnews.mv/news";
         try {
             Document doc = Jsoup.connect(URL).get();
-            Elements questions = doc.select("h2,h4,h3");
+            Elements questions = doc.select("h2");
             for (Element question : questions) {
                 mData.add(question.text());
             }
